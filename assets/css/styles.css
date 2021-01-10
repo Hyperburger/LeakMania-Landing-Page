@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: -webkit-gradient(linear, left top, right top, from(#c4183c), to(#4f37ac));
+	background-image: linear-gradient(to right, #c4183c, #4f37ac);
+	overflow: hidden;
+}
+section .wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url("../img/wave.png");
+	background-size: 1000px 100px;
+}
+section .wave.wave1 {
+	z-index: 1000;
+	opacity: 1;
+	bottom: 0;
+	animation: animateRight 16s linear infinite;
+	animation-delay: 0s;
+}
+section .wave.wave2 {
+	z-index: 999;
+	opacity: 0.5;
+	bottom: -10;
+	animation: animateRight 8s linear infinite;
+	animation-delay: -5s;
+}
+section .wave.wave3 {
+	z-index: 998;
+	opacity: 0.2;
+	bottom: 15;
+	animation: animateLeft 16s linear infinite;
+	animation-delay: -2s;
+}
+section .wave.wave4 {
+	z-index: 997;
+	opacity: 0.7;
+	bottom: 10px;
+	animation: animateLeft 8s linear infinite;
+	animation-delay: -5s;
+}
+
+.container {
+		display: table;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+}
+.middle {
+		display: table-cell;
+	text-align: center;
+	font-weight: 300;
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+		vertical-align: middle;
+}
+.title {
+	vertical-align: middle;
+	font-size: 4.35em;
+	font-weight: 900;
+	letter-spacing: -0.035em;
+	text-transform: uppercase;
+	line-height: 1em;
+	height: 100%;
+}
+.slogan {
+	vertical-align: middle;
+	font-weight: 200;
+	font-size: 15px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	line-height: 1em;
+	height: 100%;
+}
+
+a.button {
+	position:relative;
+		z-index: 19999;
+	color: #fff;
+	text-decoration: none;
+	border: solid #fff 2px;
+	border-radius: 50%;
+	padding: 24px;
+	margin: 10px;
+	font-size: 2em;
+}
+
+a {
+	transition: transform 1s ease-in-out;
+}
+a:hover {
+	background-color: #ffffff1a;
+}
+
+#particles-js {
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+@keyframes animateLeft {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: 1000px;
+	}
+}
+@keyframes animateRight {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: -1000px;
+	}
+}
+
+.upNDown {
+	animation: upNdown 2s ease-in-out infinite;
+}
+@keyframes upNdown {
+	0%, 100% {
+	transform: translateY(5px);
+	}
+	50% {
+	transform: translateY(-5px);
+	}
+}
